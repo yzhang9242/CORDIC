@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/yuanpei/Project
+vcordic_nppl
+!s110 1460669717
+!i10b 1
+!s100 hO_OVe]aML2Ed89o9]:WS0
+INFe1F2_=5IkJE^HS`Agm60
+V`JN@9S9cnhjKRR_L]QIcM3
+d/home/yuanpei/Project/tech_int/FFT_256pt
+w1460669714
+8/home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v
+F/home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v
+L0 2
+OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1460669717.310052
+!s107 /home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v|
+!i113 1
+o-work work
