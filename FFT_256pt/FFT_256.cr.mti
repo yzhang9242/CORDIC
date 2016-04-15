@@ -1,1 +1,16 @@
+/home/yuanpei/Project/tech_int/FFT_256pt/CORDIC_tb.v {1 {vlog -work work -stats=none /home/yuanpei/Project/tech_int/FFT_256pt/CORDIC_tb.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module CORDIC_tb
 
+Top level modules:
+	CORDIC_tb
+
+} {} {}} /home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v {1 {vlog -work work -stats=none /home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module cordic_iter
+-- Compiling module cordic_nppl
+
+Top level modules:
+	cordic_nppl
+
+} {} {}}

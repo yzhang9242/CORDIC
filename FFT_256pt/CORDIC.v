@@ -1,4 +1,24 @@
 // non-pipeline CORDIC module
+module cordic_iter(x_in, y_in, z_in, index, rota, x_out, y_out, z_out);
+	input signed [15 : 0] x_in, y_in, z_in;
+	input [3 : 0] index;
+	input [15 : 0] rota;
+	output reg signed [15 : 0] x_out, y_out, z_out;
+	
+	always @(x_in, y_in, z_in) begin
+		if (z_in[15]) begin
+			x_out = x_in + (y_in >>> index);
+			y_out = y_in - (x_in >>> index);
+			z_out = z_in + rota;
+		end
+		else begin
+			x_out = x_in - (y_in >>> index);
+			y_out = y_in + (x_in >>> index);
+			z_out = z_in - rota;
+		end
+	end
+endmodule
+
 module cordic_nppl (real_out, img_out, real_in, img_in, theta_in);
 	input signed [15 : 0] real_in;
 	input signed [15 : 0] img_in;
@@ -29,25 +49,6 @@ module cordic_nppl (real_out, img_out, real_in, img_in, theta_in);
 	assign rota[14] = 1;
 	assign rota[15] = 0;
 
-	// CORDIC iteration
-	task cordic_iter;
-		input signed [15 : 0] x_in, y_in, z_in;
-		input integer index;
-		output signed [15 : 0] x_out, y_out, z_out;
-		begin
-			if (z_in[15]) begin
-				x_out = x_in + (y_in >>> index);
-				y_out = y_in - (x_in >>> index);
-				z_out = z_in + rota[index];
-			end
-			else begin
-				x_out = x_in - (y_in >>> index);
-				y_out = y_in + (x_in >>> index);
-				z_out = z_in - rota[index];
-			end
-		end
-	endtask
-
 	// non-pipelined CORDIC
 	assign x_pass[0] = real_in;
 	assign y_pass[0] = img_in;
@@ -56,7 +57,15 @@ module cordic_nppl (real_out, img_out, real_in, img_in, theta_in);
 	genvar i;
 	generate
 		for (i = 0; i < 17; i = i + 1) begin : iter_gen
-			cordic_iter(x_pass[i], y_pass[i], z_pass[i], i, x_pass[i + 1], y_pass[i + 1], z_pass[i + 1]);
+			cordic_iter cordic_iter_m(
+						x_pass[i], 
+						y_pass[i], 
+						z_pass[i], 
+						i[3 : 0],
+						rota[i], 
+						x_pass[i + 1], 
+						y_pass[i + 1], 
+						z_pass[i + 1]);
 		end
 	endgenerate
 

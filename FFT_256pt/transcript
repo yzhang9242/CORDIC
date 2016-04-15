@@ -1,0 +1,53 @@
+# Loading project FFT_256
+vsim CORDIC_tb
+# vsim 
+# Start time: 23:38:15 on Apr 14,2016
+# Loading work.CORDIC_tb
+# Loading work.cordic_nppl
+# Loading work.cordic_iter
+quit -sim
+# Compile of CORDIC.v was successful.
+# Compile of CORDIC_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim CORDIC_tb
+# vsim 
+# Start time: 23:38:53 on Apr 14,2016
+# Loading work.CORDIC_tb
+# Loading work.cordic_nppl
+# Loading work.cordic_iter
+add wave -position insertpoint sim:/CORDIC_tb/*
+run -all
+#     0,     0
+# 
+# 65535,    25
+# 
+restart
+run -all
+#     0,     0
+# 
+# 65535,    25
+# 
+restart
+run -all
+#     0,     0
+# 
+# 65535,    25
+# 
+quit -sim
+# Compile of CORDIC.v was successful.
+# Compile of CORDIC_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim CORDIC_tb
+# vsim 
+# Start time: 23:44:26 on Apr 14,2016
+# Loading work.CORDIC_tb
+# Loading work.cordic_nppl
+# Loading work.cordic_iter
+add wave -position insertpoint sim:/CORDIC_tb/*
+run -all
+#     0,     0
+# 
+# 65367,  2143
+# 
+# End time: 23:49:36 on Apr 14,2016, Elapsed time: 0:05:10
+# Errors: 0, Warnings: 0

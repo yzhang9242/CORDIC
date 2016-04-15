@@ -218,7 +218,7 @@ Resolution = ps
 UserTimeUnit = default
 
 ; Default run length
-RunLength = 100
+RunLength = 100 ps
 
 ; Maximum iterations that can be run without advancing simulation time
 IterationLimit = 5000
@@ -408,10 +408,14 @@ ConcurrentFileLimit = 40
 Project_Version = 6
 Project_DefaultLib = work
 Project_SortMethod = unused
-Project_Files_Count = 1
-Project_File_0 = /home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v
-Project_File_P_0 = cover_toggle 0 vlog_protect 0 file_type verilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat 0 vlog_nodebug 0 cover_fsm 0 cover_branch 0 vlog_noload 0 last_compile 1460669714 folder {Top Level} cover_excludedefault 0 vlog_enable0In 0 vlog_disableopt 0 cover_covercells 0 voptflow 1 cover_optlevel 3 vlog_showsource 0 vlog_hazard 0 toggle - vlog_0InOptions {} ood 0 cover_noshort 0 vlog_upper 0 compile_to work vlog_options {} compile_order 0 cover_expr 0 dont_compile 0 cover_stmt 0
-Project_Sim_Count = 0
+Project_Files_Count = 2
+Project_File_0 = /home/yuanpei/Project/tech_int/FFT_256pt/CORDIC_tb.v
+Project_File_P_0 = cover_toggle 0 vlog_protect 0 file_type verilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat 0 vlog_nodebug 0 vlog_noload 0 cover_branch 0 folder {Top Level} last_compile 1460691784 cover_fsm 0 cover_excludedefault 0 vlog_enable0In 0 vlog_disableopt 0 cover_covercells 0 voptflow 1 cover_optlevel 3 vlog_showsource 0 vlog_hazard 0 toggle - vlog_0InOptions {} ood 0 cover_noshort 0 vlog_upper 0 compile_to work vlog_options {} compile_order 1 cover_expr 0 dont_compile 0 cover_stmt 0
+Project_File_1 = /home/yuanpei/Project/tech_int/FFT_256pt/CORDIC.v
+Project_File_P_1 = cover_toggle 0 vlog_protect 0 file_type verilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat 0 vlog_nodebug 0 folder {Top Level} cover_branch 0 cover_fsm 0 last_compile 1460690960 vlog_noload 0 cover_excludedefault 0 vlog_enable0In 0 vlog_disableopt 0 cover_covercells 0 voptflow 1 cover_optlevel 3 vlog_showsource 0 vlog_hazard 0 toggle - vlog_0InOptions {} ood 0 cover_noshort 0 vlog_upper 0 compile_to work vlog_options {} compile_order 0 cover_expr 0 dont_compile 0 cover_stmt 0
+Project_Sim_Count = 1
+Project_Sim_0 = CORDIC Simulation
+Project_Sim_P_0 = timing default -sdfnoerror 0 -t default -nofileshare 0 +no_pulse_msg 0 -Lf {} Generics {} +notimingchecks 0 ok 1 folder {Top Level} +pulse_e {} additional_dus CORDIC_tb -assertfile {} -std_output {} -L {} -nopsl 0 -nosva 0 +pulse_r {} -absentisempty 0 -assertcover 0 -multisource_delay {} OtherArgs {} -vital2.2b 0 is_vopt_flow 0 -memprof 0 -noglitch 0 -0in_options {} selected_du {} -sdf {} -hazards 0 -0in 0 vopt_env 1 -coverage 0 +plusarg {} -assertdebug 0 -wlf {} -sdfnowarn 0 -std_input {}
 Project_Folder_Count = 0
 Echo_Compile_Output = 0
 Save_Compile_Report = 1
